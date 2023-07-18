@@ -11,3 +11,8 @@ basepanda = pd.read_excel(atual)
 planilha = load_workbook(atual)
 aba_ativa = planilha["database"]
 
+lista_surfaces = []
+
+for i in basepanda.Surface.unique():
+    lista_surfaces.append(i)
+

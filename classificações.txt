@@ -4,8 +4,8 @@ court{
 }
 
 Surface{
-	Carpet = 0
+	Hard = 0
 	Clay = 1
 	Grass = 2
-	Hard = 3
+	Carpet = 3
 }
