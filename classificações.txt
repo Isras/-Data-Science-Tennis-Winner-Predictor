@@ -9,3 +9,12 @@ Surface{
 	Grass = 2
 	Carpet = 3
 }
+
+Comment{
+	Completed = 0
+	Retired = 1
+	Walkover = 2
+	Disqualified = 3
+	Awarded = 4
+	Sched = 5
+}

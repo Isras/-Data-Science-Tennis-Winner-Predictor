@@ -6,13 +6,14 @@ from openpyxl import Workbook, load_workbook
 
 atual = "database/final.xlsx"
 
-basepanda = pd.read_excel(atual)
+base = pd.read_excel(atual)
 
-planilha = load_workbook(atual)
-aba_ativa = planilha["database"]
+#Transformando Surfaces em números
+base = base.replace("Hard", 0)
+base = base.replace("Clay", 1)
+base = base.replace("Grass", 2)
+base = base.replace("Carpet", 3)
 
-lista_surfaces = []
-
-for i in basepanda.Surface.unique():
-    lista_surfaces.append(i)
-
+# print(type(base['Comment'].unique()))
+# for i in base['Comment'].unique():
+#     base = base.replace(i, (base['Comment'].unique()).)
