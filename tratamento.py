@@ -14,6 +14,9 @@ base = base.replace("Clay", 1)
 base = base.replace("Grass", 2)
 base = base.replace("Carpet", 3)
 
-# print(type(base['Comment'].unique()))
-# for i in base['Comment'].unique():
-#     base = base.replace(i, (base['Comment'].unique()).)
+#Transformando COmments
+n = 0
+for i in base['Comment'].unique():
+    base = base.replace(i, n)
+    n += 1
+print(base)
