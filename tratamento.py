@@ -19,4 +19,9 @@ n = 0
 for i in base['Comment'].unique():
     base = base.replace(i, n)
     n += 1
-print(base)
+
+#Transformando round
+n = 0
+for i in base['Round'].unique():
+    base = base.replace(i, n)
+    n += 1
