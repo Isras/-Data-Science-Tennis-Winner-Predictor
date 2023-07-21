@@ -18,3 +18,14 @@ Comment{
 	Awarded = 4
 	Sched = 5
 }
+
+Round{
+	1st Round = 0                       
+	2nd Round = 1
+	Quarterfinals = 2
+	Semifinals = 3
+	The Final = 4
+	3rd Round = 5
+	4th Round = 6
+	Round Robin = 7
+}
