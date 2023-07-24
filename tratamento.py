@@ -33,3 +33,17 @@ for i in base['Date'].unique():
     base = base.replace(i, k)
 
 base = base.astype({"Date": int})
+
+#Transformando Winners e Losers em Players
+players = list(set(base['Winner'].unique())|set(base['Loser'].unique()))
+
+base['Vencedor'] = base['Winner']
+base = base.rename(columns={'Winner':'player1', 'Loser':'player2'})
+
+#Transformando todos em números
+for player in players:
+    base = base.replace(player, str(players.index(player)))
+    with open("jogadores.txt", 'a') as arquivo:
+        arquivo.write(f"{player} = {str(players.index(player))}\n")
+
+base = base.astype({"player1": int, "player2": int, "Vencedor": int})
