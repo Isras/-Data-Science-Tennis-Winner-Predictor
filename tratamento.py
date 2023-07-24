@@ -1,7 +1,4 @@
 import pandas as pd
-import time
-import calendar
-from datetime import datetime
 
 atual = "database/final.xlsx"
 
@@ -47,3 +44,6 @@ for player in players:
         arquivo.write(f"{player} = {str(players.index(player))}\n")
 
 base = base.astype({"player1": int, "player2": int, "Vencedor": int})
+
+#Salva tudo no excel novo
+base.to_excel('dadostratados.xlsx')
